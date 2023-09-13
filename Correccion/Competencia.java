@@ -5,6 +5,7 @@ public class Competencia implements Comparable<Competencia>{
 
     public Competencia(List<String> habilidades) {
         this.habilidades = habilidades;
+        this.habilidades = List.copyOf(habilidades);
     }
 
     public int getNumeroCompetencias() {
