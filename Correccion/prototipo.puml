@@ -1,0 +1,60 @@
+@startuml
+
+class Gestor {
+    - ordenarPorTiempoDeExperiencia()
+    - ordenarPorNivelDeTitulacion()
+    - ordenarPorCantidadDeCompetencias()
+    - contarCompetencias()
+}
+
+class CV {
+    - candidato: Candidato
+    - titulos: List
+    - trabajos: List
+    - competencias: List
+    + getTitulos()
+    + getTrabajos()
+    + getCompetencias()
+}
+
+class Titulo {
+    - fechaDeGraduacion: String
+    - nombreUniversidad: String
+    - nivelDeTitulo: NivelDeTitulo
+    + esTituloValido()
+}
+
+class Trabajo {
+    - fechaDeIngreso: String
+    - fechaDeFinalizacion: String
+    - nombreEmpresa: String
+    + esTrabajooValido()
+    + getNombreEmpresa()
+}
+
+class Competencia {
+    - habilidad: String
+    + getHabilidad()
+}
+
+enum NivelDeTitulo {
+    PRIMERO
+    SEGUNDO
+    TERCERO
+    CUARTO
+}
+
+class Candidato {
+    - nombre: String
+    + getNombre()
+}
+
+Gestor "analiza"..> "*" CV
+CV --> "*" Titulo
+CV --> "*" Trabajo
+CV --> "*" Competencia
+Titulo --> NivelDeTitulo
+Candidato --> CV
+
+
+@enduml
