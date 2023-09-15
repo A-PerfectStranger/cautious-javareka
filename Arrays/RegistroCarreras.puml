@@ -1,0 +1,24 @@
+@startuml
+
+class Registro {
+    - tiempos: Float[]
+    - distancias: Float[]
+    - Etiquetas: String[]
+    + agregarAListaTiempo(): void
+    + agregarAListaDistancia(): void
+    + agregarAListaEtiquetas(): void
+    + mostrarDatos(): void
+    + eliminarDatoDeTiempos(): void
+    + eliminarDatoDeDistancias(): void
+    + eliminarDatoDeEtiquetas(): void
+}
+
+class Menu {
+    + mostrarMenu(): int
+}
+
+Menu "redirige"..> Registro
+
+
+
+@enduml
