@@ -1,0 +1,25 @@
+@startuml
+
+class Game {
+    + lanzarDado(): int
+    + asignarPuntos(): void
+    + verificarGanador(): void 
+}
+
+abstract class Jugador {
+    - puntaje: int
+    - turno: int
+    + continuar()
+}
+
+class Computador {
+}
+class Persona {
+} 
+
+Game --> "*" Jugador
+Computador -u-|> Jugador
+Persona -u-|> Jugador
+
+
+@enduml 
