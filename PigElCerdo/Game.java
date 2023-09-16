@@ -60,11 +60,11 @@ public class Game {
     }
 
     private boolean puedeContinuar() {
-        return persona.continuar() && persona.turno != false;
+        return persona.continuar() && persona.getTurno();
     }
 
     private boolean quiereContinuar() {
-        return contrincante.continuar() && contrincante.turno == true;
+        return contrincante.continuar() && contrincante.getTurno();
     }
 
     private void jugar() {
