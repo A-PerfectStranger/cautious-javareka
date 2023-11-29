@@ -6,7 +6,7 @@ public class infijoPrefijo {
     public static void main(String[] args) {
         String expresion = "5 * 4 + ((7/2) - 3)";
         String prefija = infijoAPrefijo(expresion);
-        System.out.println(prefija);
+        System.out.println("\n" + prefija);
     }
 
     public static String infijoAPrefijo(String expresion) {
