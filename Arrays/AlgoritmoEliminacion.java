@@ -18,11 +18,5 @@ public class AlgoritmoEliminacion {
                 V[j] = V[j + 1];
             }
         }
-        
-        for (int k : V) {
-            System.out.println(k);
-        }
-
-
     } 
 }
